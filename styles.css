@@ -1,0 +1,219 @@
+@font-face {
+    font-family: wasted-vindey;
+    src: url(Fonts/Wasted-Vindey.woff);
+}
+
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+@media (max-width: 500px) {
+    
+
+    .title-page {
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        padding-top: 0;
+    }   
+
+    .title-page h3 {
+        color: white;
+        display: flex;
+        font-family: wasted-vindey;
+        flex-direction: row;
+        font-size: 20vw;
+    }
+
+    .title-page h4 {
+        font-family: wasted-vindey;
+        font-size: 10vw;
+        flex-direction: row;
+    }   
+
+    .title-page h5 {
+        padding-top: 10rem;
+        color: #FF0558;
+        animation: text-blink 2s linear infinite;
+    }
+
+    @keyframes text-blink{
+        0% {
+            opacity: 100%;
+        }
+
+        60% {
+            opacity: 0%;
+        }
+
+        100% {
+            opacity: 100%;
+        }
+    }
+
+    .title-page h1 {
+        font-family: wasted-vindey;
+        font-size: 5vw;
+        flex-direction: row;
+    }
+
+    .heart-container {
+        display: flex;
+        margin-top: 25vw;
+    }
+
+    .heart {
+        height: 25vw;
+        width: 25vw;
+        background: linear-gradient(45deg, #FF0558, #FF0522);
+        transform: rotate(-45deg);
+        box-shadow: -10px 10px 90px #FF0522;
+        animation: heart 2s linear infinite;
+    }
+
+    .start-button {
+        z-index: 1;
+    }
+
+
+    @keyframes heart{
+        0% {
+            transform: rotate(-45deg) scale(1.04);
+        }
+
+        60% {
+            transform: rotate(-45deg) scale(1.0);
+        }
+
+        100% {
+            transform: rotate(-45deg) scale(1.04);
+        }
+    }
+
+    .heart:before {
+        content: '';
+        position: absolute;
+        height: 25vw;
+        width: 25vw;
+        background: linear-gradient(45deg, #FF0558, #FF0522);
+        top: -50%;
+        border-radius: 25vw;
+        box-shadow: -10px -10px 90px #FF0522;
+    }   
+
+    .heart:after {
+        content: '';
+        position: absolute;
+        height: 25vw;
+        width: 25vw;
+        background: linear-gradient(45deg, #FF0558, #FF0522);
+        right: -50%;
+        border-radius: 25vw;
+        box-shadow: 10px 10px 90px #FF0522;
+    }
+
+    body {
+        user-select: none;
+        -webkit-user-select: none;
+    }
+        .container {
+            padding: 2rem;
+            width: 100vw;
+            }
+
+        .slider-wrapper {
+            position: relative;
+            max-width: 48rem;
+            margin: 0 auto;
+            }
+
+        .slider {
+            display: flex;
+            aspect-ratio: 16/11;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+            border-radius: 1rem;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        .slider img {
+            flex: 1 0 100%;
+            width: 50vw;
+            scroll-snap-align: start;
+            object-fit: cover;
+        }
+
+        .slider-navigation {
+            display: flex;
+            column-gap: 1rem;
+            position: absolute;
+            bottom: 0.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .slider-navigation a {
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background-color: white;
+            opacity: 0.75;
+            transition: opacity ease 250ms;
+        }
+
+        .slider-navigation a:hover {
+            opacity: 1;
+        }
+
+        .parent {
+            height: 100vh;
+            scroll-snap-type: y mandatory;
+            overflow-x: hidden;
+        }
+
+        .month {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding-top: 25vw;
+            padding-bottom: 25vw;
+            background-color: black;
+            scroll-snap-align: start;
+        }
+
+        .month h2 {
+            font-size: 15vw;
+        }
+
+        .description {
+            width: 75%;
+            font-size: 4.5vw;
+        }
+
+        .july h2 {
+            background: -webkit-linear-gradient(#F21B93, #FF5E05);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .july p {
+            color: #F21B93;
+        }
+}
