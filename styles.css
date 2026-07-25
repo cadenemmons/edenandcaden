@@ -202,10 +202,6 @@ body {
             transition: opacity ease 250ms;
         }
 
-        .slider-navigation a:hover {
-            opacity: 1;
-        }
-
         .parent {
             height: 100vh;
             scroll-snap-type: y mandatory;
