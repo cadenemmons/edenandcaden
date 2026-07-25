@@ -33,6 +33,10 @@ body {
         font-size: 20vw;
     }
 
+    .top-text {
+        padding-top: 0;
+    }
+
     .title-page h4 {
         font-family: wasted-vindey;
         font-size: 10vw;
