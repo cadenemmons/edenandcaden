@@ -81,8 +81,8 @@ body {
     .desktop-blocker {
         opacity: 0;
         z-index: -10;
-        width: 1px;
-        height: 1px;
+        width: 0px;
+        height: 0px;
     }
 
     .title-page h1 {
